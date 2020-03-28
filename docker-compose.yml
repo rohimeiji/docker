@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+    webserver:
+        container_name: php73-apache
+        build: ./php73-apache
+        # image: rochimeiji/eiji:php73-apache
+        ports:
+          - 80:80
+        volumes: 
+          - ./www:/app/public
